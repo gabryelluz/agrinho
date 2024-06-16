@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #6A4F4B;
+    background-color: #2F4F4F;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -40,7 +40,7 @@ main {
     padding: 100px 20px 20px;
 }
 
-section {
+.section {
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -51,11 +51,11 @@ section {
 }
 
 h2 {
-    color: #4A403A;
+    color: #2F4F4F;
 }
 
 #downloads a {
-    color: #6A4F4B;
+    color: #2F4F4F;
     text-decoration: none;
     font-weight: bold;
 }
@@ -65,16 +65,16 @@ h2 {
 }
 
 footer {
-    background-color: #6A4F4B;
+    background-color: #2F4F4F;
     color: white;
     text-align: center;
     padding: 10px 0;
     width: 100%;
     bottom: 0;
-    position: fixed;
+    position: relative;
 }
 
-section:hover {
+.section:hover {
     transform: scale(1.02);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -87,7 +87,7 @@ nav ul li a:hover + .hidden-content,
 nav ul li a:focus + .hidden-content {
     display: block;
     position: absolute;
-    background-color: #6A4F4B;
+    background-color: #2F4F4F;
     color: white;
     padding: 10px;
     border-radius: 8px;
@@ -100,5 +100,18 @@ a {
 }
 
 a:hover {
-    color: #4A403A;
+    color: #1C3D3D;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+section.visible {
+    opacity: 1;
 }
