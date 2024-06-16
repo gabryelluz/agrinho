@@ -5,18 +5,24 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #4A90E2;
+    background-color: #6A4F4B;
     color: white;
     padding: 1rem 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -31,23 +37,25 @@ nav ul li a {
 }
 
 main {
-    padding: 20px;
+    padding: 100px 20px 20px;
 }
 
 section {
-    margin: 20px 0;
+    margin: 20px auto;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    transition: all 0.3s ease;
 }
 
 h2 {
-    color: #34495e;
+    color: #4A403A;
 }
 
 #downloads a {
-    color: #4A90E2;
+    color: #6A4F4B;
     text-decoration: none;
     font-weight: bold;
 }
@@ -57,17 +65,21 @@ h2 {
 }
 
 footer {
-    background-color: #4A90E2;
+    background-color: #6A4F4B;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
     bottom: 0;
+    position: fixed;
 }
 
-/* Elemento surpresa */
-section.hidden-content {
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.hidden-content {
     display: none;
 }
 
@@ -75,10 +87,18 @@ nav ul li a:hover + .hidden-content,
 nav ul li a:focus + .hidden-content {
     display: block;
     position: absolute;
-    background-color: #4A90E2;
+    background-color: #6A4F4B;
     color: white;
     padding: 10px;
     border-radius: 8px;
     margin-top: 10px;
     z-index: 1000;
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4A403A;
 }
