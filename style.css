@@ -9,27 +9,20 @@ body {
     background-color: var(--cor-fundo);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
 }
-nav {
-    background-color: #444;
-    padding: 10px 0;
-    text-align: center;
+
+#section__introducao {
+    display: flex;
 }
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0 20px;
+
+#introducao__texto {
+    text-transform: uppercase;
 }
-nav a:hover {
-    color: #ffd700;
+
+#navegador {
+    display: grid;
 }
