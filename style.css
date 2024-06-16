@@ -24,6 +24,8 @@ header {
 
 #section__introducao {
     display: flex;
+    width: 60%;
+    gap: 10%;
 }
 
 #introducao__texto {
