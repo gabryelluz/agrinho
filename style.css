@@ -5,6 +5,13 @@
     --cor-texto-branco: #ffffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--cor-texto-branco);
+    background-color: var(--cor-fundo);
+}
+
 body {
     background-color: var(--cor-fundo);
 }
@@ -25,4 +32,7 @@ header {
 
 #navegador {
     display: grid;
+    border-radius: 9px;
+    background-color: var(--cor-caixa-fundo);
+    padding: 12px;
 }
