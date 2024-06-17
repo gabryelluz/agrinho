@@ -1,8 +1,31 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.section');
-
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (entry.target.id === link.getAttribute('href').substring(1)) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+    
     sections.forEach(section => {
+        observer.observe(section);
+        
         section.addEventListener('mouseenter', () => {
             section.style.transform = 'scale(1.02)';
             section.style.boxShadow = '0 0 15px rgba(0, 0, 0, 0.2)';
@@ -13,8 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
             section.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.1)';
         });
     });
-
-    const navLinks = document.querySelectorAll('nav ul li a');
     
     navLinks.forEach(link => {
         link.addEventListener('mouseenter', () => {
