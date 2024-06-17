@@ -13,12 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (entry.target.id === link.getAttribute('href').substring(1)) {
-                        link.classList.add('active');
-                    }
-                });
             }
         });
     }, observerOptions);
